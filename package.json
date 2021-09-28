@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "MERN e-commerce Apurva",
   "main": "server.js",
+  "type": "module",
   "scripts": {
-    "start": "node backend/server"
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -17,7 +21,12 @@
   },
   "homepage": "https://github.com/apurvaparkhi/apurva-pro-shop-#readme",
   "dependencies": {
+    "-": "0.0.1",
+    "D": "^1.0.0",
     "axios": "^0.21.4",
-    "express": "^4.17.1"
+    "concurrently": "^6.2.2",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.13"
   }
 }
